@@ -1,6 +1,10 @@
 cmake_minimum_required (VERSION 2.6)
 project (my_awesome_game)
 
+# Set the C++ standard to C++20
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 add_subdirectory(../../../libs/oxygine-framework/ oxygine-framework)
 add_definitions(${OXYGINE_DEFINITIONS})
 include_directories(${OXYGINE_INCLUDE_DIRS})

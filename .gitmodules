@@ -9,7 +9,7 @@
 	url = https://github.com/cculianu/oxygine-sound.git
 [submodule "oxygine-flow"]
 	path = libs/oxygine-flow
-	url = https://github.com/oxygine/oxygine-flow.git
+	url = https://github.com/cculianu/oxygine-flow.git
 [submodule "oxygine-freetype"]
 	path = libs/oxygine-freetype
 	url = https://github.com/oxygine/oxygine-freetype.git
