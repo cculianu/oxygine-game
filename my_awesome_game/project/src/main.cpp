@@ -10,6 +10,13 @@
 #include "example.h"
 
 
+// fix linker errors
+extern "C" FILE * __cdecl __iob_func(void) {
+    static FILE _iob[] = { *stdin, *stdout, *stderr };
+    return _iob;
+}
+// end fix
+
 using namespace oxygine;
 
 

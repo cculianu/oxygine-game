@@ -64,6 +64,7 @@ void MainMenuScene::onEvent(Event* ev)
     {
         //clicked to play button
         //change scene
+        GameScene::instance = new GameScene;
         flow::show(GameScene::instance);
     }
 }

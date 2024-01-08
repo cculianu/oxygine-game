@@ -28,7 +28,7 @@ void example_init()
 	flow::init();
     //create all scenes
     GameMenu::instance = new GameMenu;
-    GameScene::instance = new GameScene;
+    //GameScene::instance = new GameScene;
     MainMenuScene::instance = new MainMenuScene;
 
     //show main menu

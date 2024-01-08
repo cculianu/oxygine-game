@@ -91,8 +91,8 @@ void GameMenu::preShowing(Event*)
 
     //and modify height and then width by tween
     spTweenQueue tq = new TweenQueue;
-    tq->add(Actor::TweenHeight(300), 500);
-    tq->add(Actor::TweenWidth(300), 500);
+    tq->add(Actor::TweenHeight(300), 125);
+    tq->add(Actor::TweenWidth(300), 125);
     //and show buttons when done
     tq->addDoneCallback(CLOSURE(this, &GameMenu::showButtons));
     _bg->addTween(tq);
