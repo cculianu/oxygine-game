@@ -58,7 +58,11 @@ if (WIN32) #disable console mode for VC++
 	set_target_properties(my_awesome_game PROPERTIES WIN32_EXECUTABLE TRUE)
 endif(WIN32)
 
-target_link_libraries(my_awesome_game ${OXYGINESOUND_LIBS} oxygine-flow ${OXYGINE_CORE_LIBS} ${OXYGINE_FREETYPE_LIBS} oxygine-freetype)
+find_package(SDL2 REQUIRED)
+if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    set(EXTRA_LIBS "-framework AppKit")
+endif()
+target_link_libraries(my_awesome_game ${OXYGINESOUND_LIBS} oxygine-flow ${OXYGINE_CORE_LIBS} ${OXYGINE_FREETYPE_LIBS} oxygine-freetype SDL2::SDL2 SDL2::SDL2main ${EXTRA_LIBS})
 
 
 if (EMSCRIPTEN)
